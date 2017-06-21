@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="sheetInteface.js"></script>
+        <script src="leveling.js"></script>
+
+        <script async defer src="https://apis.google.com/js/api.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-deep_orange.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.9.32/css/materialdesignicons.min.css">
+    </head>
+    <style>
+        * {box-sizing:border-box}
+
+        .container {
+            border-radius: 5px;
+            width: 50%;
+            background-color: #ddd;
+        }
+
+        .level {
+            border-radius: 5px;
+            background-color: #ddd;
+            line-height: 30px;
+            text-align: center;
+            color: black;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+            font-size: 20pt;
+
+        }
+
+        .skills {
+            border-radius: 5px;
+            text-align: center;
+            line-height: 20px;
+            color: black;
+            margin: 1px;
+        }
+
+        .points {width: 0%; background-color: gold;}
+
+        .click {
+            padding: 20px;
+            background-color: #ddd;
+            border-radius: 5px;
+            margin: 20px;
+        }
+    </style>
+    <body>
+        <!-- Always shows a header, even in smaller screens. -->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+          <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+              <span class="mdl-layout-title">AtmosMath</span>
+                <div class="mdl-layout-spacer"></div>
+                <div class="level" id="curr_level">0</div>
+                <div class="container">
+                  <div class="skills points" id="pointbar">0/0</div>
+                </div>
+                <div class="level" id="pro_level">0</div>
+            <div class="mdl-layout-spacer"></div>
+            </div>
+          </header>
+          <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">AtmosMath</span>
+            <nav class="mdl-navigation">
+              <a class="mdl-navigation__link" href="">Authenticate</a>
+            </nav>
+          </div>
+          <main class="mdl-layout__content">
+              <div class="page-content">
+                <br />
+                <center>
+                    <h1>Please select a subject!</h1>
+                    <br />
+                    <table>
+                        <col width="40%" />
+                        <col width="40%" />
+                        <tr style="height: 40%;">
+                            <td class="click" href="add.html"><a href="add.html"><center><img href="add.html" src="icons/svg/plus.svg" width="100px" height="100px"></center></a></td>
+                            <td class="click" href="subtract.html"><a href="subtract.html"><center><img href="subtract.html" src="icons/svg/minus.svg" width="100px" height="100px"></center></a></td>
+                        </tr>
+                        <tr style="height: 40%;">
+                            <td class="click" href="multiply.html"><a href="multiply.html"><center><img href="multiply.html" src="icons/svg/multiply.svg" width="100px" height="100px"></center></a></td>
+                            <td class="click" href="divide.html"><a href="divide.html"><center><img href="divide.html" src="icons/svg/division.svg" width="100px" height="100px"></center></a></td>
+                        </tr>
+                    </table>
+                </center>
+              </div>
+          </main>
+        </div>
+    </body>
+    <script>
+        window.onload = function() {
+            initSheetInterfaceWithoutDisplayedButtons("378113663866-n3kvphhv9asq61tmntqqra27e170edon.apps.googleusercontent.com", "1BRb5Ly5OG2DDJr2e8ZGHtbJAXu-UonESmxAGlq752OY", levlerUpdate)
+        }
+
+
+    </script>
+</html>
